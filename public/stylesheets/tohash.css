@@ -83,6 +83,9 @@ th{
   border-width: 0 1px 1px 0;
   color: #333;
 }
+thead th{
+  color: #999;
+}
 thead th:first-child{
   text-align: right;
 }
@@ -93,6 +96,13 @@ thead th:last-child{
 tbody th{
   text-align: right;
   width: 30%;
+}
+tbody tr:hover td{
+  background-color: yellow;
+  font-weight: bold;
+}
+tbody tr:hover th{
+  background-color: #FFFFCC;
 }
 
 footer img{
