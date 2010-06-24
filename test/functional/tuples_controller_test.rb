@@ -1,13 +1,12 @@
 require 'test_helper'
 
 class TuplesControllerTest < ActionController::TestCase
-  test "should get show" do
-    get :show
-    assert_response :success
+  def setup
+    @tuple = Tuple.create(:content => {:test => "true"})
   end
-
-  test "should get create" do
-    get :create
+  
+  test "should get show" do
+    get :show, :id => @tuple.sha2
     assert_response :success
   end
 
