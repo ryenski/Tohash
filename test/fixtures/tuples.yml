@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  content: MyText
+  sha1: MyString
+  sha2: MyString
+  md5: MyString
+
+two:
+  content: MyText
+  sha1: MyString
+  sha2: MyString
+  md5: MyString

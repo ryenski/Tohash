@@ -1,0 +1,33 @@
+!!!
+%html{ :lang => "en" }
+  %head
+    %title Tohash
+    = csrf_meta_tag
+    
+    %link{:href => "/stylesheets/all.css", :media => "all", :rel => "stylesheet"}
+    <![if !IE]><link rel="stylesheet" href="/stylesheets/advanced.css" media="screen and (min-device-width: 750px)" class="lf-advanced"/><![endif]>
+    /[if gt IE 6] 
+      %link{:href => "/stylesheets/advanced.css", :media => "screen and (min-device-width: 750px)", :rel => "stylesheet", :class => "lf-advanced"}
+    /[if IE]
+      %script{:src => "/javascripts/html5.js"}
+    %link{:href => "/stylesheets/tohash.css", :media => "all", :rel => "stylesheet"}
+
+  %body
+    .container
+      %header
+        %h1.first
+          %a{:href => "/"}
+            Tohash
+            %small
+              \ {:to =&gt :hash}
+      = yield
+
+      %footer
+        %p
+          A small project by 
+          %a{:href => "http://mysmallidea.com"} 
+            %img{:src => "/images/the-small-idea-company.png", :alt => "The Small Idea Company"}
+      .clear
+    
+    %a{:href => "http://github.com/mysmallidea/Tohash"}
+      %img{:alt => "Fork me on GitHub", :src => "http://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png", :style => "position: absolute; top: 0; right: 0; border: 0;"}/

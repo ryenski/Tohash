@@ -1,0 +1,50 @@
+%article
+  %h1 
+    Stored Values for
+    = params[:id]
+
+  %table
+    %thead
+      %tr
+        %th Key
+        %th Value
+    %tbody
+      - for k,v in @tuple.content
+        %tr
+          %th= k
+          %td= v
+
+%article
+  %h1 Hashes
+  %table
+    %thead
+      %tr
+        %th Scheme
+        %th Hash
+    %tbody
+      %tr
+        %th SHA2
+        %td= @tuple.sha2
+      %tr
+        %th SHA1
+        %td= @tuple.sha1
+      %tr
+        %th MD5
+        %td= @tuple.md5
+      
+  
+%article
+  %h2 Alternate URLs
+  %p
+    %strong SHA2: 
+    = link_to "http://tohash.com/#{@tuple.sha2}", @tuple
+  %p
+    %strong SHA1: 
+    = link_to "http://tohash.com/#{@tuple.sha1}", url_for(@tuple.sha1)
+  %p
+    %strong MD5: 
+    = link_to "http://tohash.com/#{@tuple.md5}", url_for(@tuple.md5)
+
+%article
+  %h2 Help
+  %a{:href => "/"} How to hash

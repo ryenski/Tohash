@@ -1,0 +1,101 @@
+.container {
+	width: 936px;
+	max-width: 936px;
+}
+.clear{
+  clear: both;
+  float: left;
+}
+p, article h1, figure {
+  margin-bottom: .5em;
+}
+
+article {
+  color: #222;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #ccc;
+}
+article a:hover{
+  text-decoration: none;
+}
+
+header h1 {
+  margin-bottom: 0.5em;
+}
+
+header h1 small {
+  color: #333;
+}
+
+header h1,header h1 a {
+  color: red;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+	color: #AA0000;
+  border-bottom: 3px solid #AA0000;
+}
+
+footer p {
+  color: grey;
+}
+
+figure {
+  height: 312px;
+  background: #aaa;
+}
+
+footer {
+  font-size: 0.8em;
+  margin: 1em 0 6em 0;
+  clear: both;
+  color: #333;
+}
+
+hr {
+  background: #cccccc;
+  color: #cccccc;
+  clear: both;
+  float: none;
+  width: 100%;
+  height: 1px;
+  margin: 0 0 16px 0;
+  border: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+td, th {
+  border: solid #eee;
+  padding: 0.2em 1em;
+}
+td{
+  border-width: 0 0 1px 0;  
+  color: #000;
+}
+th{
+  border-width: 0 1px 1px 0;
+  color: #333;
+}
+thead th:first-child{
+  text-align: right;
+}
+thead th:last-child{
+  text-align: left;
+  border-right: none;
+}
+tbody th{
+  text-align: right;
+  width: 30%;
+}
+
+footer img{
+  vertical-align: sub;
+  border: none;
+}

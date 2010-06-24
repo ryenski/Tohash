@@ -1,0 +1,41 @@
+%article
+  
+  %h2 Creating a new Hash
+  
+  %p
+    HTTP GET 
+    %tt http://tohash.com/new
+    followed by your query string. This will create a new hash record, saving the contents of your query string as key/value pairs. You can later reference the key/value pairs simply by visiting your hash's URL. 
+  %h3 Example
+  %p
+    = link_to new_hash_url(@sample_hash.content), new_hash_url(@sample_hash.content)
+    / %a{:href => "/new?#{@sample_hash.content.to_param}"}= "http://tohash.com/new?#{@sample_hash.content.to_param}"
+
+%article
+  %h2 Accessing your Hash
+  %p
+    Just visit your hash's unique URL in your browser. You can also reference your hash via the API (see below) for use in your apps.
+    
+  %h3 Example
+  %p
+    = link_to hash_url(@sample_hash.sha2), hash_url(@sample_hash.sha2)
+  
+  %p Your hash can be referenced using SHA2, SHA1, or trusty old MD5:
+  
+  %h4 SHA2
+  = link_to hash_url(@sample_hash.sha2), hash_url(@sample_hash.sha2)
+  %h4 SHA1
+  = link_to hash_url(@sample_hash.sha1), hash_url(@sample_hash.sha1)
+  %h4 MD5
+  = link_to hash_url(@sample_hash.md5), hash_url(@sample_hash.md5)
+
+%article
+  %h2 API
+  %p You can also get the hash values in many different formats: 
+  %h4 XML
+  = link_to hash_url(@sample_hash, :format => :xml), hash_url(@sample_hash, :format => :xml)
+  %h4 YAML
+  = link_to hash_url(@sample_hash, :format => :yaml), hash_url(@sample_hash, :format => :yaml)
+  %h4 CSV
+  = link_to hash_url(@sample_hash, :format => :csv), hash_url(@sample_hash, :format => :csv)
+  
